@@ -5,7 +5,7 @@ const validateCredentional = (req, res, next) => {
  if (!username || !password) {
   next({
    status: 401,
-   message: "userman and password required",
+   message: "username and password required",
   });
  } else {
   next();
@@ -24,20 +24,20 @@ async function checkUsernameAvailable(req, res, next) {
  }
 }
 
-async function checkUsernameExists(req,res,next){
-    const [user] = await User.findBy({username: req.body.username})
-    if(user){
-        next()
-    }else {
-        next({
-            status: 401,
-            message: 'invalid credentials'
-        })
-    }
+async function checkUsernameExists(req, res, next) {
+ const [user] = await User.findBy({ username: req.body.username });
+ if (user) {
+  next();
+ } else {
+  next({
+   status: 401,
+   message: "invalid credentials",
+  });
+ }
 }
 
 module.exports = {
  validateCredentional,
  checkUsernameAvailable,
- checkUsernameExists
+ checkUsernameExists,
 };
