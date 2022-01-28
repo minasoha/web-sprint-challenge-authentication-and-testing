@@ -14,7 +14,7 @@ describe("[POST] /register", () => {
  test("responds with error when no username", async () => {
   const res = await request(server).post("/api/auth/register").send({
    username: "",
-   password: "qweiion",
+   password: "qqwweiqweqidsadon",
   });
   expect(res.body).toStrictEqual({ message: "username and password required" });
  });
@@ -32,13 +32,13 @@ describe("[POST] /login", () => {
  test("responds with error when no username", async () => {
   const res = await request(server).post("/login").send({
    username: "",
-   password: "qweiion",
+   password: "pqiejufbjkbq",
   });
   expect(res.status).toBe(404);
  });
  test("responds with error when no password", async () => {
   const res = await request(server).post("/api/auth/login").send({
-   username: "pnqjweb",
+   username: "hgfkmxaqs",
    password: "",
   });
   expect(res.body).toStrictEqual({ message: "invalid credentials" });
