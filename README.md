@@ -63,9 +63,9 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 3. How are unit tests different from integration and end-to-end testing?
 
-    Unit tests, test code alone. However, integrations tests how everything works together, a test like a user.
-
+    Unit testing verifies that indvidual code blocks works as expected and output what is expected. End-to-end testing verifies that everything works correctly on the application and behaive like it should. Integration testing, tests several components to make sure they all work together perfectly.
+    
 4. How does _Test Driven Development_ change the way we write applications and tests?
 
 
-    Test driven development allow us to create tests that we can follow so as soon as we break something.
+    Test driven development is when we create tests before we create the actual component. This allows us to know exactly what to write in order to pass the tests that was writtien in the begining.
